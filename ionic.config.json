@@ -1,0 +1,7 @@
+{
+  "name": "iBeaconScan",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
