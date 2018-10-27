@@ -4,20 +4,21 @@ Scans for iBeacon devices and other BLE peripherals
 How to build Ionic and Cordova for iOS:
 
 1. Install ionic and Cordova via npm: 
-`$ npm install -g ionic cordova ios-deploy `
+  `$ npm install -g ionic cordova ios-deploy `
 
 2. Create new project: 
-`$ ionic start <projectName> <starterTemplate>`
+  `$ ionic start <projectName> <starterTemplate>`
 
 3. Build:
-` $ ionic cordova build ios -- --buildFlag="-UseModernBuildSystem=0"```
+  ` $ ionic cordova build ios -- --buildFlag="-UseModernBuildSystem=0"`
 
-  If you have issues with Xcode-select and command line see: https://stackoverflow.com/questions/17980759/xcode-select-active-developer-directory-error/17980786#17980786  During build you will get a certificate signing error. 
+    If you have issues with Xcode-select and command line see: https://stackoverflow.com/questions/17980759/xcode-select-active-developer-directory-error/17980786#17980786  During build you will get a certificate signing error. 
 
 4. Signing:
- - Open the project in Xcode by navigating to the project directory > platforms > iOS > and select the xcodeproj file  
 
     IMPORTANT: If using Xcode 10, go to File > Project Settings > Select Legacy Build System. If you don’t do this Xcode will not properly sign the package.  
+
+    - Open the project in Xcode by navigating to the project directory > platforms > iOS > and select the xcodeproj file  
 
     - Add your Apple ID under Preferences > Accounts  
 
