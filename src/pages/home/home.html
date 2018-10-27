@@ -7,8 +7,33 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <h1>Beacons</h1>
+  <div *ngFor="let beacon of beacons; let idx = index;">
+    <h3>Beacon {{idx + 1}}</h3>
+    <strong>Major</strong>
+    <p> {{beacon.major }} </p>
+    <strong>Minor</strong>
+    <p> {{beacon.minor }} </p>
+    <strong>RSSI</strong>
+    <p> {{beacon.rssi }} </p>
+  </div>
+
+  <h1> Connected Devices </h1>
+  <button ion-button type="button" (click)="scanForDevices()">SCAN</button>
+  <div *ngFor="let device of connectedDevices; let idx = index;">
+    <label>Device {{idx + 1}}:</label>
+    <p> {{device | json}} </p>
+  </div>
+
+  <!-- <h1> Unpaired Devices </h1>
+  <div *ngFor="let device of unpairedDevices; let idx = index;">
+    <label>Device {{idx + 1}}:</label>
+    <p> {{device | json}} </p>
+  </div> -->
+
+  <!-- <h1>BLE Devices:</h1>
+  <div *ngFor="let device of bleDevices; let idx = index;">
+    <label>BLE Device {{idx + 1}}:</label>
+    <p> {{device | json}} </p>
+  </div> -->
 </ion-content>
